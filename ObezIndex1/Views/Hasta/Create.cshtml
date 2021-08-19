@@ -1,0 +1,104 @@
+﻿@model ObezIndex1.Models.Hasta
+
+<form method= "post" asp-action="Create">
+<body>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <h1>Temel Değerlendirme Formu</h1>
+  
+    
+        <h1>Lütfen Aşağıdaki Formu Doldurunuz</h1>
+      
+    <div class="contentform">
+        <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+        <div class="leftcontact">
+            <div class="form-group">
+                <label asp-for="pat_name"></label>
+                <span class="icon-case"><i class="fa fa-male"></i></span>
+                <input asp-for="pat_name" class="form-control"/>
+                <span asp-validation-for="pat_name" class="text-danger"></span>
+        </div> 
+
+
+
+        <div class="form-group">
+        <label asp-for="pat_username"></label>  
+        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input asp-for="pat_username" class="form-control"/>
+                <span asp-validation-for="pat_username" class="text-danger"></span>
+
+        </div>  
+
+        <div class="form-group">
+        <label asp-for="pat_height"></label>  
+        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input asp-for="pat_height" class="form-control"/>
+                <span asp-validation-for="pat_height" class="text-danger"></span>
+
+        </div>  
+
+        <div class="form-group">
+        <label asp-for="pat_weight"></label>  
+        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input asp-for="pat_weight" class="form-control"/>
+                <span asp-validation-for="pat_weight" class="text-danger"></span>
+
+        </div>  
+
+        <div class="form-group">
+        <label asp-for="pat_gender"></label>  
+        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input asp-for="pat_gender" class="form-control"/>
+                <span asp-validation-for="pat_gender" class="text-danger"></span>
+        </div>   
+
+
+
+    </div>
+
+    <div class="rightcontact">  
+
+        <div class="form-group">
+        <label asp-for="pat_age"></label>  
+        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input asp-for="pat_age" class="form-control"/>
+                <span asp-validation-for="pat_age" class="text-danger"></span>
+        </div>  
+
+        <div class="form-group">
+        <p>Yaş <span>*</span></p>  
+        <span class="icon-case"><i class="fa fa-phone"></i></span>
+        <input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+                <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
+        <p>Ev Telefon No. <span>*</span></p>
+        <span class="icon-case"><i class="fa fa-info"></i></span>
+                <input type="text" name="fonction" id="fonction" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+                <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
+        <p>İş Telefon No. <span>*</span></p> 
+        <span class="icon-case"><i class="fa fa-comment-o"></i></span>
+                <input type="text" name="sujet" id="sujet" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné."/>
+                <div class="validation"></div>
+        </div>
+    
+        <div class="form-group">
+        <p>Adress <span>*</span></p>
+        <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                <textarea name="message" rows="14" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
+                <div class="validation"></div>
+        </div>  
+    </div>
+    </div>
+<button type="submit" class="bouton-contact">Send</button>
+  
+
+</body>
+
+</form>
+
